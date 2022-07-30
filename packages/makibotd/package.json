@@ -1,0 +1,17 @@
+{
+  "name": "@makigas/makibotd",
+  "version": "5.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "start": "node dist/src"
+  },
+  "dependencies": {
+    "@makigas/makibot-core": "*",
+    "dotenv": "^16.0.1"
+  }
+}

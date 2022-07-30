@@ -1,0 +1,36 @@
+{
+  "name": "@makigas/clank-ng",
+  "private": "true",
+  "workspaces": [
+    "packages/core",
+    "packages/makibotd"
+  ],
+  "lint-staged": {
+    "*.ts": "eslint",
+    "*.md": "prettier --check"
+  },
+  "scripts": {
+    "clean": "npm run clean --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:staged": "lint-staged",
+    "test": "npm run build && node --test",
+    "makibotd": "npm run start --workspace=@makigas/makibotd"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "discord.js": "^14.1.2",
+    "find-up": "^6.3.0"
+  }
+}

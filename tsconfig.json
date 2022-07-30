@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "Node16",
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules", "**/dist"],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/makibotd" }
+  ]
+}
